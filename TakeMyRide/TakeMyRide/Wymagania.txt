@@ -1,0 +1,19 @@
+﻿Zaliczenie - wymagania
+Wymagania dotyczące zaliczenia na ocenę:
+
+-Ustalenie z prowadzącym tematyki i szczegółów technicznych projektu (2-3 pierwsze tygodnie). Dostarczenie opisu funkcjonalnego projektu w formie elektronicznej. Od 4 tygodnia zajęć naliczana kara 3% za każdy tydzień zwłoki. (grupa 1: 21 marca; grupa 2: 28 marca)
+
+Wymagania techniczne:
+-zastosowanie pełnego wzorca MVVM - binding wartości oraz "command" (25 %)
+-adaptatywny interface użytkownika - dotyczy zarówno geometrii jak i systemu operacyjnego (15 %)
+-wykorzystanie zdarzeń związanych z cyklem życia aplikacji - OnStart, OnSleep, OnResume (10%)
+-wykorzystanie konstrukcji "DependencyService" do ujednolicenia asynchronicznego dostępu do plików (20 %)
+-dodatkowe właściwości (dwie z wymienionych) (20%): 
+	-nawigacja stron z przekazywaniem wartości
+	-walidacja danych na formularzach
+	-zarządzanie konfiguracją aplikacji
+	-dostęp do danych zdalnych (np.: REST) i wykorzystanie pamięci podręcznej (cache)
+-Usability (10 %)
+Extra 10 % za obecność.
+
+Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wcześniej ogłoszonego harmonogramu.

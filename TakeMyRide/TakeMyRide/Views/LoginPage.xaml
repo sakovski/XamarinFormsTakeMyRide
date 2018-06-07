@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TakeMyRide"
+             x:Class="TakeMyRide.MainPage">
+
+    <StackLayout VerticalOptions="Center" Spacing="50">
+        <!-- Place new controls here -->
+    	<Label Text="Welcome to TakeMyRide!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Entry x:Name="LoginEntry"/>
+        <Entry x:Name="PasswordEntry" IsPassword="true"></Entry>
+        <Button Clicked="LoginButton_Clicked" Text="Login" BackgroundColor="Bisque" BorderRadius="20" TextColor="Black">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="ic_photo_camera_black_240dp"
+                            />
+            </Button.Image>
+        </Button>
+        <Button Clicked="RegisterButton_Clicked" Text="Register" BackgroundColor="Red" BorderRadius="20" TextColor="Black"/>
+    </StackLayout>
+
+</ContentPage>

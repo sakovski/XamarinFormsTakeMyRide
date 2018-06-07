@@ -1,0 +1,9 @@
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\bin\Debug\netstandard2.0\TakeMyRide.deps.json
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\bin\Debug\netstandard2.0\TakeMyRide.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\bin\Debug\netstandard2.0\TakeMyRide.pdb
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.csproj.CoreCompileInputs.cache
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.AssemblyInfoInputs.cache
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.AssemblyInfo.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.pdb
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.csprojAssemblyReference.cache
