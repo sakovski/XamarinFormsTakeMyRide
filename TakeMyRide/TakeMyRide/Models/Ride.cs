@@ -1,11 +1,15 @@
-﻿using System;
+﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TakeMyRide.Models
 {
-    class Ride
+    [Table("Rides")]
+    public class Ride
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public User Driver { get; set; }
         public string BaseCity { get; set; }
@@ -21,6 +25,7 @@ namespace TakeMyRide.Models
 
         public string AdditionalInfo { get; set; }
 
+        [OneToMany]
         public ICollection<User> Passengers { get; set; }
     }
 }

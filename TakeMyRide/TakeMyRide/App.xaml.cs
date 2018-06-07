@@ -1,4 +1,5 @@
 using System;
+using TakeMyRide.Data;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,6 +8,8 @@ namespace TakeMyRide
 {
 	public partial class App : Application
 	{
+        static DatabaseService database;
+
 		public App ()
 		{
 			InitializeComponent();
@@ -14,9 +17,21 @@ namespace TakeMyRide
 			MainPage = new NavigationPage(new MainPage());
 		}
 
-		protected override void OnStart ()
+        public static DatabaseService Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new DatabaseService(DependencyService.Get<IDbFileHelper>().getLocalFilePath("TakeMyRideSQLite.db3"));
+                }
+                return database;
+            }
+        }
+
+        protected override void OnStart ()
 		{
-			// Handle when your app starts
+            createDB();
 		}
 
 		protected override void OnSleep ()
@@ -28,5 +43,10 @@ namespace TakeMyRide
 		{
 			// Handle when your app resumes
 		}
+
+        private void createDB()
+        {
+
+        }
 	}
 }
