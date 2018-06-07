@@ -11,8 +11,15 @@ namespace TakeMyRide.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public User Driver { get; set; }
+
+        [ForeignKey(typeof(Driver))]
+        public int DriverId { get; set; }
+
+        [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)]
+        public Driver Driver { get; set; }
+
         public string BaseCity { get; set; }
+
         public string GoalCity { get; set; }
 
         public DateTime DateOfStart { get; set; }
@@ -25,7 +32,7 @@ namespace TakeMyRide.Models
 
         public string AdditionalInfo { get; set; }
 
-        [OneToMany]
-        public ICollection<User> Passengers { get; set; }
+        [ManyToMany(typeof(PassengerRide), CascadeOperations = CascadeOperation.All, ReadOnly = true)]
+        public ICollection<Passenger> Passengers { get; set; }
     }
 }

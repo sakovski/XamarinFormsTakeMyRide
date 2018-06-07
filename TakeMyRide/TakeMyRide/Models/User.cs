@@ -25,14 +25,5 @@ namespace TakeMyRide.Models
 
         public DateTime DateOfBirth { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public IEnumerable<Ride> RidesAsDriver { get; set; }
-
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public IEnumerable<Ride> RidesAsPassenger { get; set; }
-
-        public float RatingAvarage { get; set; }
-
-        public IEnumerable<float> Ratings { get; set; }
     }
 }
