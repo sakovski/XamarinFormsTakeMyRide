@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TakeMyRide.Helpers;
 using TakeMyRide.Services;
 using TakeMyRide.Views;
 using Xamarin.Forms;
@@ -64,7 +65,11 @@ namespace TakeMyRide.ViewModels
                 {
                     if(await loginService.loginUserAsync(UserName, Password, Function))
                     {
+                        Settings.Username = UserName;
+                        Settings.Password = Password;
+                        Settings.Function = Function;
                         await Application.Current.MainPage.Navigation.PushAsync(new MainMenuPage());
+                       
                     }
                     else
                     {

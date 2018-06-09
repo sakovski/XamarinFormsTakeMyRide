@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-09T21:11:34.653</Modified>
+      <Modified>2018-06-09T22:16:58.078</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\TakeMyRide.UWP.exe">
       <PackagePath>entrypoint\TakeMyRide.UWP.exe</PackagePath>
-      <Modified>2018-06-09T21:11:33.397</Modified>
+      <Modified>2018-06-09T22:16:57.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\admin\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -731,6 +731,14 @@
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
       <Modified>2017-05-01T11:27:24.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\admin\.nuget\packages\xam.plugins.settings\3.1.1\lib\UAP10\Plugin.Settings.Abstractions.dll">
+      <PackagePath>Plugin.Settings.Abstractions.dll</PackagePath>
+      <Modified>2017-10-17T21:03:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\admin\.nuget\packages\xam.plugins.settings\3.1.1\lib\UAP10\Plugin.Settings.dll">
+      <PackagePath>Plugin.Settings.dll</PackagePath>
+      <Modified>2017-10-17T21:03:16.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\admin\.nuget\packages\xamarin.forms\3.0.0.550146\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2018-06-04T21:59:16.000</Modified>
@@ -749,7 +757,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\bin\Debug\netstandard2.0\TakeMyRide.dll">
       <PackagePath>TakeMyRide.dll</PackagePath>
-      <Modified>2018-06-09T21:11:25.036</Modified>
+      <Modified>2018-06-09T22:16:49.677</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -896,11 +904,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-06-09T21:11:33.132</Modified>
+      <Modified>2018-06-09T22:16:56.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-06-09T21:11:33.133</Modified>
+      <Modified>2018-06-09T22:16:56.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -913,11 +921,11 @@
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-09T14:15:53.798</Modified>
+      <Modified>2018-06-09T21:56:00.515</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\Core\TakeMyRide.UWP.exe">
       <PackagePath>TakeMyRide.UWP.exe</PackagePath>
-      <Modified>2018-06-09T21:11:34.647</Modified>
+      <Modified>2018-06-09T22:16:58.073</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

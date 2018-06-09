@@ -118,6 +118,7 @@ namespace TakeMyRide.ViewModels
                 {
                     registerService.registerUserAsync(Function, UserName, Password, FirstName, LastName, Email, Telephone, DateOfBirth);
                     await Application.Current.MainPage.Navigation.PopAsync();
+                    await Application.Current.MainPage.DisplayAlert("Register succesful!", "", "OK");
                 });
             }
         }

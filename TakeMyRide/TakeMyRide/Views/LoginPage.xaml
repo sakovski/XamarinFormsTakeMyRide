@@ -14,8 +14,10 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         <Entry x:Name="LoginEntry" 
+               Placeholder="Login"
                Text="{Binding UserName}"/>
         <Entry x:Name="PasswordEntry" 
+               Placeholder="Password"
                IsPassword="true" 
                Text="{Binding Password}"/>
         <Picker x:Name="UserTypePicker" SelectedItem="{Binding Function}">

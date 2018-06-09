@@ -8600,6 +8600,7 @@
     "UAP,Version=v10.0.16299": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.5",
       "TakeMyRide >= 1.0.0",
+      "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Forms >= 3.0.0.550146",
       "sqlite-net-pcl >= 1.4.118"
     ]
@@ -8651,6 +8652,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.1.5, )"
+          },
+          "Xam.Plugins.Settings": {
+            "target": "Package",
+            "version": "[3.1.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

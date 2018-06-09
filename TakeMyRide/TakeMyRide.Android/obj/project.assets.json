@@ -1009,6 +1009,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v7.1": [
       "TakeMyRide >= 1.0.0",
+      "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Android.Support.Design >= 25.4.0.2",
       "Xamarin.Android.Support.v4 >= 25.4.0.2",
       "Xamarin.Android.Support.v7.AppCompat >= 25.4.0.2",
@@ -1060,6 +1061,10 @@
     "frameworks": {
       "monoandroid71": {
         "dependencies": {
+          "Xam.Plugins.Settings": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
             "version": "[25.4.0.2, )"

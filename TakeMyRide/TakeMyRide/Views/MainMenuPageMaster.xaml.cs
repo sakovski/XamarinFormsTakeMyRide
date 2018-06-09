@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using TakeMyRide.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,7 +27,7 @@ namespace TakeMyRide.Views
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
-            //logout user
+            Settings.Clear();
             Navigation.PopAsync();
         }
 
@@ -35,7 +35,8 @@ namespace TakeMyRide.Views
         {
             public ObservableCollection<MainMenuPageMenuItem> MenuItems { get; set; }
             
-            public string UserName { get; set; }
+            public string Username{ get; set; }
+            
 
             public MainMenuPageMasterViewModel()
             {
@@ -46,6 +47,8 @@ namespace TakeMyRide.Views
                     new MainMenuPageMenuItem { Id = 2, Title = "Offer your ride", TargetType = typeof(OfferRidePage) },
                     new MainMenuPageMenuItem { Id = 3, Title = "Your profile", TargetType = typeof(UserProfilePage) },
                 });
+
+                Username = "Hello, " + Settings.Username + "!";
             }
 
             #region INotifyPropertyChanged Implementation
