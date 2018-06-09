@@ -35,6 +35,8 @@ namespace TakeMyRide.Views
         {
             public ObservableCollection<MainMenuPageMenuItem> MenuItems { get; set; }
             
+            public string UserName { get; set; }
+
             public MainMenuPageMasterViewModel()
             {
                 MenuItems = new ObservableCollection<MainMenuPageMenuItem>(new[]

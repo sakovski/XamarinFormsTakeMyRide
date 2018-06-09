@@ -33,3 +33,5 @@ Xamarin.Forms.Xaml
 netstandard
 System.Reflection.Extensions
 System.Resources.ResourceManager
+Plugin.Settings.Abstractions
+Plugin.Settings

@@ -18,9 +18,9 @@ namespace TakeMyRide.Models
         [ManyToOne(CascadeOperations = CascadeOperation.CascadeRead)]
         public Driver Driver { get; set; }
 
-        public string BaseCity { get; set; }
+        public string StartCity { get; set; }
 
-        public string GoalCity { get; set; }
+        public string DestinationCity { get; set; }
 
         public DateTime DateOfStart { get; set; }
 
