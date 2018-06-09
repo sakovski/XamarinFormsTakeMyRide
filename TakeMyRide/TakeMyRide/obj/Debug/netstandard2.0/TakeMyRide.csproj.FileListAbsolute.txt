@@ -6,4 +6,14 @@ D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\net
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.AssemblyInfo.cs
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.dll
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.pdb
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\MainMenuPage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\MainMenuPageMaster.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\OfferRidePage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\SearchRidePage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\UserProfilePage.xaml.g.cs
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.csprojAssemblyReference.cache

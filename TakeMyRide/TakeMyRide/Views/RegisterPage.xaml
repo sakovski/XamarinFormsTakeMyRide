@@ -1,12 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
              x:Class="TakeMyRide.Views.RegisterPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Register Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <!-- Place new controls here -->
+        <Label Text="Register" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Label Text="Account Type"/>
+        <Picker x:Name="UserTypePicker" SelectedItem="{Binding Function}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Driver</x:String>
+                    <x:String>Passenger</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Login"/>
+        <Entry x:Name="LoginEntry" 
+               Text="{Binding UserName}"/>
+        <Label Text="Password"/>
+        <Entry x:Name="PasswordEntry" 
+               IsPassword="true" 
+               Text="{Binding Password}"/>
+        <Label Text="Firstname"/>
+        <Entry x:Name="FirstnameEntry" 
+               Text="{Binding FirstName}"/>
+        <Label Text="Lastname"/>
+        <Entry x:Name="LastnameEntry" 
+               Text="{Binding LastName}"/>
+        <Label Text="Email"/>
+        <Entry x:Name="EmailEntry" 
+               Text="{Binding Email}"/>
+        <Label Text="Telephone"/>
+        <Entry x:Name="TelephoneEntry" 
+               Text="{Binding Telephone}"/>
+        <Label Text="Date of birth"/>
+        <DatePicker Date="{Binding DateOfBirth}"
+                            Format="dd-MM-yyyy"
+                            Grid.Row="0"
+                            Grid.Column="1" />    
+        <Button Command="{Binding RegisterUser, Mode=TwoWay}" 
+                Text="Register" 
+                BackgroundColor="Bisque" 
+                BorderRadius="20" 
+                TextColor="Black">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="ic_photo_camera_black_240dp"
+                            />
+            </Button.Image>
+        </Button>
+    </StackLayout>
 </ContentPage>

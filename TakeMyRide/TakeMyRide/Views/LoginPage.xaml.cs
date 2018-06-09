@@ -14,26 +14,7 @@ namespace TakeMyRide
 		public MainPage()
 		{
 			InitializeComponent();
-            BindingContext = new LoginViewModel();
+            BindingContext = new LoginViewModel();         
 		}
-
-        private void LoginButton_Clicked(object sender, EventArgs e)
-        {
-            string logintext = LoginEntry.Text;
-            string passwordtext = PasswordEntry.Text;
-            if(false) //if login password valid
-            {
-                Navigation.PushAsync(new MainMenuPage());
-            }
-            else
-            {
-                DisplayAlert("Log in failed!", "Wrong password!", "OK");
-            }
-        }
-
-        private void RegisterButton_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new RegisterPage());
-        }
     }
 }

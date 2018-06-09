@@ -2,23 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TakeMyRide"
+             xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
              x:Class="TakeMyRide.MainPage">
-
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel />
+    </ContentPage.BindingContext>
+    
     <StackLayout VerticalOptions="Center" Spacing="50">
         <!-- Place new controls here -->
     	<Label Text="Welcome to TakeMyRide!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-        <Entry x:Name="LoginEntry"/>
-        <Entry x:Name="PasswordEntry" IsPassword="true"></Entry>
-        <Button Clicked="LoginButton_Clicked" Text="Login" BackgroundColor="Bisque" BorderRadius="20" TextColor="Black">
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="ic_photo_camera_black_240dp"
-                            />
-            </Button.Image>
+        <Entry x:Name="LoginEntry" 
+               Text="{Binding UserName}"/>
+        <Entry x:Name="PasswordEntry" 
+               IsPassword="true" 
+               Text="{Binding Password}"/>
+        <Picker x:Name="UserTypePicker" SelectedItem="{Binding Function}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Driver</x:String>
+                    <x:String>Passenger</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Command="{Binding LoginUser, Mode=TwoWay}" 
+                Text="Login" 
+                BackgroundColor="Bisque" 
+                BorderRadius="20" 
+                TextColor="Black">
         </Button>
-        <Button Clicked="RegisterButton_Clicked" Text="Register" BackgroundColor="Red" BorderRadius="20" TextColor="Black"/>
+        <Button Command="{Binding RegisterUser, Mode=TwoWay}" Text="Create New Account" BackgroundColor="Red" BorderRadius="20" TextColor="Black"/>
     </StackLayout>
 
 </ContentPage>

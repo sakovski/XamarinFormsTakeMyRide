@@ -293,3 +293,16 @@ D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\obj\x86\D
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\obj\x86\Debug\ProjectArchitectures.txt
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLite-net.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLite-net.pdb
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLiteNetExtensions.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLitePCLRaw.core.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLiteNetExtensions.pdb
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLiteNetExtensionsAsync.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLiteNetExtensionsAsync.pdb
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\bin\x86\Debug\e_sqlite3.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\obj\x86\Debug\XamlC.stamp

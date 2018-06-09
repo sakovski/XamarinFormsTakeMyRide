@@ -15,9 +15,13 @@ namespace TakeMyRide.Data
         {
             database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<User>().Wait();
+            database.CreateTableAsync<Passenger>().Wait();
+            database.CreateTableAsync<Driver>().Wait();         
             database.CreateTableAsync<Ride>().Wait();
+            database.CreateTableAsync<PassengerRide>().Wait();
         }
 
+        #region User
         public Task<List<User>> GetUsersAsync()
         {
             return database.Table<User>().ToListAsync();
@@ -27,6 +31,11 @@ namespace TakeMyRide.Data
         public Task<User> GetUserAsync(int id)
         {
             return database.Table<User>().Where(i => i.Id == id).FirstOrDefaultAsync();
+        }
+
+        public Task<User> GetUserAsync(string username)
+        {
+            return database.Table<User>().Where(i => i.UserName.Equals(username)).FirstOrDefaultAsync();
         }
 
         public Task<int> SaveUserAsync(User user)
@@ -45,7 +54,38 @@ namespace TakeMyRide.Data
         {
             return database.DeleteAsync(user);
         }
+        #endregion
 
+        #region Driver
+        public Task<int> SaveDriverAsync(Driver driver)
+        {
+            if (driver.Id != 0)
+            {
+                return database.UpdateAsync(driver);
+            }
+            else
+            {
+                return database.InsertAsync(driver);
+            }
+        }
+        #endregion
+
+        #region Passenger
+
+        public Task<int> SavePassengerAsync(Passenger passenger)
+        {
+            if (passenger.Id != 0)
+            {
+                return database.UpdateAsync(passenger);
+            }
+            else
+            {
+                return database.InsertAsync(passenger);
+            }
+        }
+        #endregion
+
+        #region Ride
         public Task<List<Ride>> GetRidesAsync()
         {
             return database.Table<Ride>().ToListAsync();
@@ -73,5 +113,6 @@ namespace TakeMyRide.Data
         {
             return database.DeleteAsync(ride);
         }
+        #endregion
     }
 }

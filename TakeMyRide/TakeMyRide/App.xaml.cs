@@ -8,7 +8,8 @@ namespace TakeMyRide
 {
 	public partial class App : Application
 	{
-        static DatabaseService database;
+        //private static DatabaseService database;
+        private static FakeDatabaseService database;
 
 		public App ()
 		{
@@ -17,6 +18,20 @@ namespace TakeMyRide
 			MainPage = new NavigationPage(new MainPage());
 		}
 
+        
+        public static FakeDatabaseService Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new FakeDatabaseService();
+                }
+                return database;
+            }
+        }
+        
+        /*
         public static DatabaseService Database
         {
             get
@@ -28,7 +43,7 @@ namespace TakeMyRide
                 return database;
             }
         }
-
+        */
         protected override void OnStart ()
 		{
             createDB();

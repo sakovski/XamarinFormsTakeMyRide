@@ -36,6 +36,19 @@
           "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.dll": {}
         }
       },
+      "SQLiteNetExtensions.Async/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
@@ -375,7 +388,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.0.0.446417",
+          "SQLiteNetExtensions": "2.0.0",
+          "SQLiteNetExtensions.Async": "2.0.0",
+          "Xamarin.Forms": "3.0.0.550146",
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
@@ -434,9 +449,37 @@
       "path": "sqlitenetextensions/2.0.0",
       "files": [
         "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.dll.mdb",
         "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.pdb",
         "sqlitenetextensions.2.0.0.nupkg.sha512",
         "sqlitenetextensions.nuspec",
+        "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
+        "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs",
+        "src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs",
+        "src/SQLiteNetExtensions/Extensions/ReadOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
+        "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
+      ]
+    },
+    "SQLiteNetExtensions.Async/2.0.0": {
+      "sha512": "3BAQtqEgxW5K5X9a2OtovaKIakXXfr/GiyaANcNJoebRPKqPZTB7Io6WQBS537iUy+0y+iwaTacX9ZJJjk45yw==",
+      "type": "package",
+      "path": "sqlitenetextensions.async/2.0.0",
+      "files": [
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensionsAsync.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensionsAsync.pdb",
+        "sqlitenetextensions.async.2.0.0.nupkg.sha512",
+        "sqlitenetextensions.async.nuspec",
         "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
         "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
         "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
@@ -887,7 +930,6 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v7.1": [
-      "SQLiteNetExtensions >= 2.0.0",
       "TakeMyRide >= 1.0.0",
       "Xamarin.Android.Support.Design >= 25.4.0.2",
       "Xamarin.Android.Support.v4 >= 25.4.0.2",
@@ -940,10 +982,6 @@
     "frameworks": {
       "monoandroid71": {
         "dependencies": {
-          "SQLiteNetExtensions": {
-            "target": "Package",
-            "version": "[2.0.0, )"
-          },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
             "version": "[25.4.0.2, )"
@@ -975,5 +1013,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 3.0.0.550146 to 3.0.0.446417. Reference the package directly from the project to select a different version. \r\n TakeMyRide.Android -> TakeMyRide -> Xamarin.Forms (>= 3.0.0.550146) \r\n TakeMyRide.Android -> Xamarin.Forms (>= 3.0.0.446417)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v7.1"
+      ]
+    }
+  ]
 }
