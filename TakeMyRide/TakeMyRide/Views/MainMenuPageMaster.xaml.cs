@@ -40,13 +40,28 @@ namespace TakeMyRide.Views
 
             public MainMenuPageMasterViewModel()
             {
-                MenuItems = new ObservableCollection<MainMenuPageMenuItem>(new[]
+                switch(Settings.Function)
                 {
-                    new MainMenuPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(HomePage) },
-                    new MainMenuPageMenuItem { Id = 1, Title = "Search rides", TargetType = typeof(SearchRidePage) },
-                    new MainMenuPageMenuItem { Id = 2, Title = "Offer your ride", TargetType = typeof(OfferRidePage) },
-                    new MainMenuPageMenuItem { Id = 3, Title = "Your profile", TargetType = typeof(UserProfilePage) },
-                });
+                    case "Driver":
+                        MenuItems = new ObservableCollection<MainMenuPageMenuItem>(new[]
+                        {
+                            new MainMenuPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(HomePage) },
+                            new MainMenuPageMenuItem { Id = 1, Title = "Offer your ride", TargetType = typeof(OfferRidePage) },
+                            new MainMenuPageMenuItem { Id = 2, Title = "Your profile", TargetType = typeof(UserProfilePage) },
+                        });
+                        break;
+                    case "Passenger":
+                        MenuItems = new ObservableCollection<MainMenuPageMenuItem>(new[]
+                        {
+                            new MainMenuPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(HomePage) },
+                            new MainMenuPageMenuItem { Id = 1, Title = "Search rides", TargetType = typeof(SearchRidePage) },
+                            new MainMenuPageMenuItem { Id = 2, Title = "Your profile", TargetType = typeof(UserProfilePage) },
+                        });
+                        break;
+                    default:
+                        break;
+                }
+                
 
                 Username = "Hello, " + Settings.Username + "!";
             }
