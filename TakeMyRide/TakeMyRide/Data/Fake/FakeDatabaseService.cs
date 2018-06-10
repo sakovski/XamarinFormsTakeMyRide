@@ -74,6 +74,11 @@ namespace TakeMyRide.Data
                 return driverRepository.InsertDriver(driver);
             }
         }
+
+        public Task<Driver> GetDriverAsync(string userName)
+        {
+            return driverRepository.GetDriverByUsername(userName);
+        }
         #endregion
 
         #region Passenger
@@ -90,36 +95,34 @@ namespace TakeMyRide.Data
             }
         }
         #endregion
-        /*
         #region Ride
         public Task<List<Ride>> GetRidesAsync()
         {
-            return database.Table<Ride>().ToListAsync();
+            return rideRepository.GetAllAsync();
         }
 
 
         public Task<Ride> GetRideAsync(int id)
         {
-            return database.Table<Ride>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return rideRepository.GetRideById(id);
         }
 
         public Task<int> SaveRideAsync(Ride ride)
         {
             if (ride.Id != 0)
             {
-                return database.UpdateAsync(ride);
+                return rideRepository.UpdateRide(ride);
             }
             else
             {
-                return database.InsertAsync(ride);
+                return rideRepository.InsertRide(ride);
             }
         }
 
         public Task<int> DeleteRideAsync(Ride ride)
         {
-            return database.DeleteAsync(ride);
+            return rideRepository.DeleteRide(ride);
         }
         #endregion
-        */
     }
 }

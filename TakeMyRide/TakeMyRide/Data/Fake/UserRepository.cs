@@ -54,10 +54,5 @@ namespace TakeMyRide.Data
         {
             throw new NotImplementedException();
         }
-
-        internal Task<int> InsertPasenger(Passenger passenger)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
