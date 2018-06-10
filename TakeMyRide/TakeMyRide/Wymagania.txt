@@ -17,3 +17,7 @@ Wymagania dotyczące zaliczenia na ocenę:
 Extra 10 % za obecność.
 
 Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wcześniej ogłoszonego harmonogramu.
+
+//TODO:
+-walidatory Behaviour dla formularzy rejestracji i dodania oferty
+-...

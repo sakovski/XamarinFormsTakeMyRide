@@ -63,18 +63,26 @@ namespace TakeMyRide.ViewModels
             {
                 return new Command(async () =>
                 {
-                    if(await loginService.loginUserAsync(UserName, Password, Function))
+                    if (Function == String.Empty || Function == null)
                     {
-                        Settings.Username = UserName;
-                        Settings.Password = Password;
-                        Settings.Function = Function;
-                        await Application.Current.MainPage.Navigation.PushAsync(new MainMenuPage());
-                       
+                        await Application.Current.MainPage.DisplayAlert("Login failed!", "Please select your account type!", "OK");
                     }
                     else
                     {
-                        await Application.Current.MainPage.DisplayAlert("Wrong username or password!", "Check if username and password match or create new account!", "OK");
+                        if (await loginService.loginUserAsync(UserName, Password, Function))
+                        {
+                            Settings.Username = UserName;
+                            Settings.Password = Password;
+                            Settings.Function = Function;
+                            await Application.Current.MainPage.Navigation.PushAsync(new MainMenuPage());
+
+                        }
+                        else
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Login failed!", "Check if username and password match or correct function is chosen!", "OK");
+                        }
                     }
+                    
                 });
             }
         }

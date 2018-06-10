@@ -10,12 +10,27 @@ namespace TakeMyRide.Services
     {
         public async Task<bool> loginUserAsync(string userName, string password, string function)
         {
-            var user = App.Database.GetUserAsync(userName);
-            if(user.Result != null)
+            var user = App.Database.GetUserAsync(userName).Result;
+            return user != null && IsLoginAndPasswordMatch(user, password) && IsUserFunctionMatches(user, function);          
+        }
+
+        private bool IsLoginAndPasswordMatch(User user, string password)
+        {
+            return password != null && password != string.Empty && user.Password.Equals(password);
+        }
+
+        private bool IsUserFunctionMatches(User user, string function)
+        {
+            if(function.Equals("Driver"))
             {
-                return true;
+                var driver = App.Database.GetDriverAsync(user.UserName).Result;
+                return driver != null;
             }
-            return false;           
+            else
+            {
+                var passenger = App.Database.GetPassengerAsync(user.UserName).Result;
+                return passenger != null;
+            }
         }
     }
 }

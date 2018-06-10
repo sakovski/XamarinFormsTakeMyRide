@@ -4,53 +4,73 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using TakeMyRide.Models;
+using TakeMyRide.Data.Fake;
 
 namespace TakeMyRide.Data
 {
-    public class UserRepository
+    public static class UserRepository
     {
-        private List<User> users;
-        
-        public UserRepository()
+        private static List<User> users;
+
+        static UserRepository()
         {
             users = new List<User>();
             SeedUsers();
         }
 
-        private void SeedUsers()
+        private static void SeedUsers()
         {
-            users.Add(new User { Id = 1, UserName = "test", Password = "Test" });
-            users.Add(new User { Id = 2, UserName = "Test2", Password = "Test2" });
-            users.Add(new User { Id = 3, UserName = "Test3", Password = "Test3" });
+            User user1 = new User { Id = 1, UserName = "testdriver", Password = "testdriver" };
+            User user2 = new User { Id = 2, UserName = "testpassenger", Password = "testpassenger" };
+            users.Add(user1);
+            users.Add(user2);
+            DriverRepository.InsertDriver(
+                new Driver()
+                {
+                    User = user1,
+                    UserId = user1.Id,
+                    RidesAsDriver = new List<Ride>(),
+                    Ratings = new List<float>()
+                }
+                );
+            PassengerRepository.InsertPassenger(
+                new Passenger()
+                {
+                    User = user2,
+                    UserId = user2.Id,
+                    RidesAsPassenger = new List<Ride>()
+                }
+            );
+
         }
 
-        public async Task<List<User>> GetAllAsync()
+        public static async Task<List<User>> GetAllAsync()
         {
             return await Task.FromResult(users);
         }
 
-        public async Task<User> GetUserById(int id)
+        public static async Task<User> GetUserById(int id)
         {
             return await Task.FromResult(users.FirstOrDefault(u => u.Id == id));
         }
 
-        public async Task<User> GetUserByUsername(string username)
+        public static async Task<User> GetUserByUsername(string username)
         {
             return await Task.FromResult(users.FirstOrDefault(u => u.UserName.Equals(username)));
         }
 
-        public Task<int> UpdateUser(User user)
+        public static Task<int> UpdateUser(User user)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<int> InsertUser(User user)
+        public static async Task<int> InsertUser(User user)
         {
             users.Add(user);
             return 0;
         }
 
-        public async Task<int> DeleteUser(User user)
+        public static async Task<int> DeleteUser(User user)
         {
             throw new NotImplementedException();
         }

@@ -1,12 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
              x:Class="TakeMyRide.Views.HomePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <ContentPage.BindingContext>
+        <viewModels:OffersListViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Label Text="RideOffers"
+               FontSize="Large"
+               TextColor="White"
+               BackgroundColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               HeightRequest="40"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start" />
+        <StackLayout Padding="2"
+                     VerticalOptions="StartAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ListView x:Name="OffersListView"
+                            ItemsSource="{Binding OffersList, Mode=TwoWay}"
+                            SelectedItem="{Binding SelectedOffer, Mode=TwoWay}"
+                            Grid.Row="0"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            SeparatorVisibility="Default"
+                            SeparatorColor="Black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Driver}"
+                                      Detail="{Binding DateOfRide, StringFormat='{0:yyyy-MM-dd}'}"
+                                      TextColor="Black"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout VerticalOptions="End">
+            <Button Command="{Binding AddVisit, Mode=TwoWay}"
+                    Text="Dodaj wizytę"
+                    TextColor="White"
+                    BackgroundColor="Green" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

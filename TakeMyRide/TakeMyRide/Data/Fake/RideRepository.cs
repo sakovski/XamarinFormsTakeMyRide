@@ -6,36 +6,36 @@ using TakeMyRide.Models;
 
 namespace TakeMyRide.Data.Fake
 {
-    public class RideRepository
+    public static class RideRepository
     {
-        private List<Ride> rides;
-        public RideRepository()
+        private static List<Ride> rides;
+        static RideRepository()
         {
             rides = new List<Ride>();
         }
 
-        public Task<List<Ride>> GetAllAsync()
+        public static async Task<List<Ride>> GetAllAsync()
+        {
+            return await Task.FromResult(rides);
+        }
+
+        public static Task<Ride> GetRideById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Ride> GetRideById(int id)
+        public static Task<int> UpdateRide(Ride ride)
         {
             throw new NotImplementedException();
         }
 
-        public Task<int> UpdateRide(Ride ride)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<int> InsertRide(Ride ride)
+        public static async Task<int> InsertRide(Ride ride)
         {
             rides.Add(ride);
             return 0;
         }
 
-        public Task<int> DeleteRide(Ride ride)
+        public static Task<int> DeleteRide(Ride ride)
         {
             throw new NotImplementedException();
         }

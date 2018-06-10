@@ -9,56 +9,39 @@ namespace TakeMyRide.Data
 {
     public class FakeDatabaseService
     {
-        private UserRepository userRepository;
-        private DriverRepository driverRepository;
-        private PassengerRepository passengerRepository;
-        private RideRepository rideRepository;
-
-        public FakeDatabaseService()
-        {
-            InitFakeDb();
-        }
-
-        private void InitFakeDb()
-        {
-            userRepository = new UserRepository();
-            driverRepository = new DriverRepository();
-            passengerRepository = new PassengerRepository();
-            rideRepository = new RideRepository();
-        }
 
         #region User
         public Task<List<User>> GetUsersAsync()
         {
-            return userRepository.GetAllAsync();
+            return UserRepository.GetAllAsync();
         }
 
 
         public Task<User> GetUserAsync(int id)
         {
-            return userRepository.GetUserById(id);
+            return UserRepository.GetUserById(id);
         }
 
         public Task<User> GetUserAsync(string username)
         {
-            return userRepository.GetUserByUsername(username);
+            return UserRepository.GetUserByUsername(username);
         }
         
         public Task<int> SaveUserAsync(User user)
         {
             if (user.Id != 0)
             {
-                return userRepository.UpdateUser(user);
+                return UserRepository.UpdateUser(user);
             }
             else
             {
-                return userRepository.InsertUser(user);
+                return UserRepository.InsertUser(user);
             }
         }
 
         public Task<int> DeleteUserAsync(User user)
         {
-            return userRepository.DeleteUser(user);
+            return UserRepository.DeleteUser(user);
         }
         #endregion
 
@@ -67,17 +50,17 @@ namespace TakeMyRide.Data
         {
             if (driver.Id != 0)
             {
-                return driverRepository.UpdateDriver(driver);
+                return DriverRepository.UpdateDriver(driver);
             }
             else
             {
-                return driverRepository.InsertDriver(driver);
+                return DriverRepository.InsertDriver(driver);
             }
         }
 
         public Task<Driver> GetDriverAsync(string userName)
         {
-            return driverRepository.GetDriverByUsername(userName);
+            return DriverRepository.GetDriverByUsername(userName);
         }
         #endregion
 
@@ -87,41 +70,46 @@ namespace TakeMyRide.Data
         {
             if (passenger.Id != 0)
             {
-                return passengerRepository.UpdatePassenger(passenger);
+                return PassengerRepository.UpdatePassenger(passenger);
             }
             else
             {
-                return passengerRepository.InsertPassenger(passenger);
+                return PassengerRepository.InsertPassenger(passenger);
             }
+        }
+
+        public Task<Passenger> GetPassengerAsync(string userName)
+        {
+            return PassengerRepository.GetPassengerByUsername(userName);
         }
         #endregion
         #region Ride
-        public Task<List<Ride>> GetRidesAsync()
+        public async Task<IEnumerable<Ride>> GetRidesAsync()
         {
-            return rideRepository.GetAllAsync();
+            return await RideRepository.GetAllAsync();
         }
 
 
         public Task<Ride> GetRideAsync(int id)
         {
-            return rideRepository.GetRideById(id);
+            return RideRepository.GetRideById(id);
         }
 
         public Task<int> SaveRideAsync(Ride ride)
         {
             if (ride.Id != 0)
             {
-                return rideRepository.UpdateRide(ride);
+                return RideRepository.UpdateRide(ride);
             }
             else
             {
-                return rideRepository.InsertRide(ride);
+                return RideRepository.InsertRide(ride);
             }
         }
 
         public Task<int> DeleteRideAsync(Ride ride)
         {
-            return rideRepository.DeleteRide(ride);
+            return RideRepository.DeleteRide(ride);
         }
         #endregion
     }

@@ -1,29 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TakeMyRide.Models;
 
 namespace TakeMyRide.Data.Fake
 {
-    public class PassengerRepository
+    public static class PassengerRepository
     {
-        public List<Passenger> passengers;
+        private static List<Passenger> passengers;
 
-        public PassengerRepository()
+        static PassengerRepository()
         {
             passengers = new List<Passenger>();
         }
 
-        public async Task<int> UpdatePassenger(Passenger passenger)
+        public static async Task<int> UpdatePassenger(Passenger passenger)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<int> InsertPassenger(Passenger passenger)
+        public static async Task<int> InsertPassenger(Passenger passenger)
         {
             passengers.Add(passenger);
             return 1;
+        }
+
+        public static async Task<Passenger> GetPassengerByUsername(string username)
+        {
+            return await Task.FromResult(passengers.FirstOrDefault(u => u.User.UserName.Equals(username)));
         }
     }
 }
