@@ -8,18 +8,19 @@ namespace TakeMyRide.Services
 {
     public class OfferRideService
     {
-        public async void OfferRideAsync(string startCity, string destinationCity, DateTime dateOfStart, 
+        public async void OfferRide(string startCity, string destinationCity, DateTime dateOfStart, 
             TimeSpan timeOfStart, string priceForSeat, string amountOfSeats, string carInfo, string additionalInfo)
         {
             var driver = await App.Database.GetDriverAsync(Settings.Username);
             DateTime dateTime = new DateTime(dateOfStart.Year, dateOfStart.Month, dateOfStart.Day, timeOfStart.Hours, timeOfStart.Minutes, 0);
             decimal price = Decimal.Parse(priceForSeat);
             int amountSeats = Int32.Parse(amountOfSeats);
-            var ride = CreateRideAsync(driver, startCity, destinationCity, dateTime, price, amountSeats, carInfo, additionalInfo);
+            var ride = CreateRide(driver, startCity, destinationCity, dateTime, price, amountSeats, carInfo, additionalInfo);
             await App.Database.SaveRideAsync(ride);
+            driver.RidesAsDriver.Add(ride);
         }
 
-        private Ride CreateRideAsync(Driver driver, string startCity, string destinationCity, DateTime dateOfStart, 
+        private Ride CreateRide(Driver driver, string startCity, string destinationCity, DateTime dateOfStart, 
             decimal priceForSeat, int amountOfSeats, string carInfo, string additionalInfo)
         {
             return new Ride()

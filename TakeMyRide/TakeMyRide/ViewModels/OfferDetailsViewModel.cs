@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TakeMyRide.Helpers;
 using TakeMyRide.Models;
+using TakeMyRide.Services;
 using Xamarin.Forms;
 
 namespace TakeMyRide.ViewModels
 {
     public class OfferDetailsViewModel : BaseViewModel
     {
+        private BookRideService bookRideService = new BookRideService();
+
         private int _id;
         public int Id
         {
@@ -157,7 +161,15 @@ namespace TakeMyRide.ViewModels
             {
                 return new Command(async () =>
                 {
-                    await Application.Current.MainPage.DisplayAlert("TODO", "Booking service", "OK");
+                    if(Settings.Function.Equals("Driver"))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error!", "Drivers cant book rides!", "OK");
+                    }
+                    else
+                    {
+                        bookRideService.BookRide(Id, Settings.Username);
+                        await Application.Current.MainPage.DisplayAlert("Thank you!", "You've just booked one seat.", "OK");
+                    }                  
                 });
             }
         }

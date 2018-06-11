@@ -95,6 +95,10 @@ namespace TakeMyRide.Data
         }
 
 
+        public async Task<int> GetLastRideId()
+        {
+            return await RideRepository.GetLastId();
+        }
         public Task<Ride> GetRideAsync(int id)
         {
             return RideRepository.GetRideById(id);

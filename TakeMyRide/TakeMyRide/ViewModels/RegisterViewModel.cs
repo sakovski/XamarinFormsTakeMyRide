@@ -143,10 +143,10 @@ namespace TakeMyRide.ViewModels
 
         private bool IsRegisterDataValid()
         {
-            return Regex.IsMatch(FirstName, RegexPatterns.namePattern) && FirstName != null
-                && Regex.IsMatch(LastName, RegexPatterns.namePattern) && LastName != null
-                && Regex.IsMatch(Telephone, RegexPatterns.phoneNumberPattern) && Telephone != null
-                && Regex.IsMatch(Email, RegexPatterns.emailPattern) && Email != null
+            return FirstName != null && Regex.IsMatch(FirstName, RegexPatterns.namePattern)
+                && LastName != null && Regex.IsMatch(LastName, RegexPatterns.namePattern)
+                && Telephone != null && Regex.IsMatch(Telephone, RegexPatterns.phoneNumberPattern) 
+                && Email != null && Regex.IsMatch(Email, RegexPatterns.emailPattern) 
                 && DatesValidators.IsDateOfBirthValid(DateOfBirth)
                 && Password != null && Password != string.Empty 
                 && Function != string.Empty && Function != null;

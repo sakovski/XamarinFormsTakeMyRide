@@ -123,7 +123,7 @@ namespace TakeMyRide.ViewModels
                     }
                     else
                     {
-                        offerRideService.OfferRideAsync(StartCity, DestinationCity, DateOfStart, TimeOfStart, PriceForSeat, AmountOfSeats, CarInfo, AdditionalInfo);
+                        offerRideService.OfferRide(StartCity, DestinationCity, DateOfStart, TimeOfStart, PriceForSeat, AmountOfSeats, CarInfo, AdditionalInfo);
                         await Application.Current.MainPage.DisplayAlert("Offer published!", "", "OK");
                     }
                     
@@ -133,12 +133,12 @@ namespace TakeMyRide.ViewModels
 
         private bool IsOfferDataValid()
         {
-            return Regex.IsMatch(StartCity, RegexPatterns.namePattern) && StartCity != null
-               && Regex.IsMatch(DestinationCity, RegexPatterns.namePattern) && DestinationCity != null
-               && Regex.IsMatch(PriceForSeat, RegexPatterns.pricePattern) && PriceForSeat != null
-               && Regex.IsMatch(AmountOfSeats, RegexPatterns.seatsPattern) && AmountOfSeats != null
-               && Regex.IsMatch(CarInfo, RegexPatterns.descriptionPattern) && CarInfo != null
-               && Regex.IsMatch(AdditionalInfo, RegexPatterns.descriptionPattern) && AdditionalInfo != null
+            return StartCity != null && Regex.IsMatch(StartCity, RegexPatterns.namePattern) 
+               && DestinationCity != null && Regex.IsMatch(DestinationCity, RegexPatterns.namePattern)  
+               && PriceForSeat != null && Regex.IsMatch(PriceForSeat, RegexPatterns.pricePattern) 
+               && AmountOfSeats != null && Regex.IsMatch(AmountOfSeats, RegexPatterns.seatsPattern)  
+               && CarInfo != null && Regex.IsMatch(CarInfo, RegexPatterns.descriptionPattern)  
+               && AdditionalInfo != null && Regex.IsMatch(AdditionalInfo, RegexPatterns.descriptionPattern)  
                && DatesValidators.IsDateOfRideValid(DateOfStart);
         }
     }

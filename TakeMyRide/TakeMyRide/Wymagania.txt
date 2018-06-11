@@ -25,4 +25,5 @@ Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wc
 -splash screen
 -scrollowanie przy formularzach
 -zmienic tlo i kolorystyke bo sie gryzie
+-napraw wyjatki
 -...

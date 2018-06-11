@@ -19,6 +19,6 @@ namespace TakeMyRide.Models
         public int UserId { get; set; }
 
         [ManyToMany(typeof(PassengerRide), CascadeOperations = CascadeOperation.All)]
-        public IEnumerable<Ride> RidesAsPassenger { get; set; }
+        public ICollection<Ride> RidesAsPassenger { get; set; }
     }
 }

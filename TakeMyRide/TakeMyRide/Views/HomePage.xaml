@@ -37,8 +37,42 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Vertical" BackgroundColor="Yellow" Padding="10">
-                                    <Label Text="{Binding StartCity}"></Label>
-                                    <Label Text="{Binding DestinationCity}"></Label>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="From:"
+                                          FontSize="Micro"
+                                          Grid.Row="0"
+                                          Grid.Column="0"
+                                          HorizontalOptions="Start"
+                                          VerticalOptions="Center" />
+                                        <Label Text="{Binding StartCity}"
+                                        TextColor="Black"
+                                        Grid.Row="0"
+                                        Grid.Column="1" />
+                                        <Label Text="To:"
+                                        FontSize="Micro"
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center" />
+                                        <Label Text="{Binding DestinationCity}"
+                                        TextColor="Black"
+                                         Grid.Row="1"
+                                         Grid.Column="1" />
+                                        <Label Text="Date:"
+                                        FontSize="Micro"
+                                        Grid.Row="0"
+                                         Grid.Column="2"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center" />
+                                        <Label Text="{Binding DateOfStart, StringFormat='{0:dd-MM-yyyy hh:mm}'}"
+                                        TextColor="Black"
+                                        Grid.Row="0"
+                                        Grid.Column="3" />
+                                    </Grid>
                                 </StackLayout>
                             </ViewCell>
                           

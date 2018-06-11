@@ -20,7 +20,7 @@ namespace TakeMyRide.Models
         public int UserId { get; set; }
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public IEnumerable<Ride> RidesAsDriver { get; set; }
+        public ICollection<Ride> RidesAsDriver { get; set; }
 
         //public float RatingAvarage { get; set; }
 
@@ -39,6 +39,6 @@ namespace TakeMyRide.Models
             }
         }
 
-        public IEnumerable<float> Ratings { get; set; }
+        public ICollection<float> Ratings { get; set; }
     }
 }
