@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
              xmlns:behaviors="clr-namespace:TakeMyRide.Validators"
-             x:Class="TakeMyRide.Views.RegisterPage">
+             x:Class="TakeMyRide.Views.RegisterPage"
+             BackgroundImage="background.jpg">
     <ContentPage.BindingContext>
         <viewModels:RegisterViewModel />
     </ContentPage.BindingContext>
@@ -11,10 +12,12 @@
     <StackLayout HorizontalOptions="FillAndExpand">
 
         <Label Text="Register" 
+               FontSize="Medium"
+               TextColor="White"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-        <Label Text="Account Type"/>
-        <Picker x:Name="UserTypePicker" SelectedItem="{Binding Function}">
+        <Label Text="Account Type" TextColor="White"/>
+        <Picker x:Name="UserTypePicker" SelectedItem="{Binding Function}" BackgroundColor="White">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Driver</x:String>
@@ -64,21 +67,17 @@
             </Entry.Behaviors>
         </Entry>
 
-        <Label Text="Date of birth"/>
+        <Label Text="Date of birth" TextColor="White"/>
         <DatePicker Date="{Binding DateOfBirth}"
                             Format="dd-MM-yyyy"
+                            BackgroundColor="White"
                             Grid.Row="0"
                             Grid.Column="1" />
         <Button Command="{Binding RegisterUser, Mode=TwoWay}" 
                 Text="Register" 
-                BackgroundColor="Bisque" 
+                BackgroundColor="White" 
                 BorderRadius="20" 
                 TextColor="Black">
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="ic_photo_camera_black_240dp"
-                            />
-            </Button.Image>
         </Button>
     </StackLayout>
 </ContentPage>

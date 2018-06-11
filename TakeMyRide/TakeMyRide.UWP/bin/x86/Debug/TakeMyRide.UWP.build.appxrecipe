@@ -568,6 +568,9 @@
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\bin\Debug\netstandard2.0\TakeMyRide.dll">
       <PackagePath>TakeMyRide.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\background.jpg">
+      <PackagePath>background.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

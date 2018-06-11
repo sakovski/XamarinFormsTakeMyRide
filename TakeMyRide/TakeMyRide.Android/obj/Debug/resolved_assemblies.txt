@@ -4,6 +4,8 @@ D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\D
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Mono.Android.dll
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\mscorlib.dll
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
+D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Plugin.Settings.dll
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\SQLite-net.dll
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\SQLiteNetExtensions.dll
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\SQLiteNetExtensionsAsync.dll

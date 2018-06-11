@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using TakeMyRide.ViewModels;
 using TakeMyRide.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace TakeMyRide
 {
-	public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MainPage : ContentPage
 	{
 		public MainPage()
 		{

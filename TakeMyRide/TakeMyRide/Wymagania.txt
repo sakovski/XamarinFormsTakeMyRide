@@ -20,8 +20,9 @@ Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wc
 
 //TODO:
 -wyswietlanie kart z ofertami w HomePage
--sprawdzanei przy rejestracji czy nie ma userna z takim samym username i email
--walidatory Behaviour dla formularzy rejestracji i dodania oferty
 -potiwerdzenia hasla przy rejestracji
 -onsleep on resume + sesja uzytkownika
+-splash screen
+-scrollowanie przy formularzach
+-zmienic tlo i kolorystyke bo sie gryzie
 -...

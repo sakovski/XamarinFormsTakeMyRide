@@ -109,6 +109,8 @@ class MonoPackageManager_Resources {
 		"TakeMyRide.Android.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Settings.Abstractions.dll",
+		"Plugin.Settings.dll",
 		"SQLite-net.dll",
 		"SQLiteNetExtensions.dll",
 		"SQLiteNetExtensionsAsync.dll",
