@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
+             x:Class="TakeMyRide.Views.OfferDetailsPage">
+    <ContentPage.BindingContext>
+        <viewModels:OfferDetailsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Label Text="Ride Details"
+               FontSize="Large"
+               TextColor="White"
+               BackgroundColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               HeightRequest="40"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start" />
+        
+        <StackLayout Padding="10"
+                     VerticalOptions="StartAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Start city:"
+                       FontSize="Micro"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding StartCity}"
+                       TextColor="Black"
+                       Grid.Row="0"
+                       Grid.Column="1" />
+                <Label Text="Destination city:"
+                       FontSize="Micro"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding DestinationCity}"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       Grid.Column="1" />
+                <Label Text="Date:"
+                       FontSize="Micro"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding DateOfStart, StringFormat='{0:dd-MM-yyyy hh:mm}'}"
+                       TextColor="Black"
+                       Grid.Row="2"
+                       Grid.Column="1" />
+                <Label Text="{Binding TimeOfStart}"
+                       TextColor="Black"
+                       Grid.Row="2"
+                       Grid.Column="2" />
+                <Label Text="Price for seat:"
+                       FontSize="Micro"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding PriceForSeat, StringFormat='{0:0.00} PLN'}"
+                       TextColor="Black"
+                       Grid.Row="3"
+                       Grid.Column="1" />
+                <Label Text="Amount of seats:"
+                       FontSize="Micro"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding AmountOfSeats}"
+                       TextColor="Black"
+                       Grid.Row="4"
+                       Grid.Column="1" />
+                <Label Text="Driver:"
+                       FontSize="Micro"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding DriverUsername}"
+                       TextColor="Black"
+                       Grid.Row="5"
+                       Grid.Column="1" />
+                <Label Text="Driver rating:"
+                       FontSize="Micro"
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding DriverRating}"
+                       TextColor="Black"
+                       Grid.Row="6"
+                       Grid.Column="1" />
+                <Label Text="Car information:"
+                       FontSize="Micro"
+                       Grid.Row="7"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding CarInfo}"
+                       TextColor="Black"
+                       Grid.Row="7"
+                       Grid.Column="1" />
+                <Label Text="Additional information:"
+                       FontSize="Micro"
+                       Grid.Row="8"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding AdditionalInfo}"
+                       TextColor="Black"
+                       Grid.Row="8"
+                       Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+        <StackLayout VerticalOptions="End">
+            <Button Command="{Binding BookSeat, Mode=TwoWay}"
+                    Text="Book seat"
+                    FontSize="Default"
+                    TextColor="Black"
+                    BackgroundColor="White" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

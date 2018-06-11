@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using TakeMyRide.Models;
+using TakeMyRide.Views;
 using Xamarin.Forms;
 
 namespace TakeMyRide.ViewModels
@@ -67,12 +68,29 @@ namespace TakeMyRide.ViewModels
             {
                 return new Command(async () =>
                 {
-                    //var visitDetailsViewModel = InitVisitDetailsViewModel();
-                    // var visitDetailsPage = new VisitDetailsPage(visitDetailsViewModel);
-                    //await Application.Current.MainPage.Navigation.PushAsync(visitDetailsPage);
-                    await Application.Current.MainPage.DisplayAlert("Selected Offer", "", "OK");
+                    var offerDetailsViewModel = InitOfferDetailsViewModel();
+                    var offerDetailsPage = new OfferDetailsPage(offerDetailsViewModel);
+                    await Application.Current.MainPage.Navigation.PushAsync(offerDetailsPage);
                 });
             }
+        }
+
+        private OfferDetailsViewModel InitOfferDetailsViewModel()
+        {
+            return new OfferDetailsViewModel
+            {
+                Id = _selectedOffer.Id,
+                DriverId = _selectedOffer.DriverId,
+                DriverUsername = _selectedOffer.Driver.User.UserName,
+                Driver = _selectedOffer.Driver,
+                StartCity = _selectedOffer.StartCity,
+                DestinationCity = _selectedOffer.DestinationCity,
+                DateOfStart = _selectedOffer.DateOfStart,
+                PriceForSeat = _selectedOffer.PriceForSeat,
+                AmountOfSeats = _selectedOffer.AmountOfSeats,
+                CarInfo = _selectedOffer.CarInfo,
+                AdditionalInfo = _selectedOffer.AdditionalInfo
+            };
         }
     }
 }

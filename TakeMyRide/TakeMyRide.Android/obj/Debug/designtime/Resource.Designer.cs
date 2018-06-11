@@ -2225,6 +2225,9 @@ namespace TakeMyRide.Droid
 			// aapt resource value: 2130837613
 			public static int avd_show_password_3 = 2130837613;
 			
+			// aapt resource value: 0
+			public static int background = 0;
+			
 			// aapt resource value: 2130837589
 			public static int design_bottom_navigation_item_background = 2130837589;
 			
@@ -2242,9 +2245,6 @@ namespace TakeMyRide.Droid
 			
 			// aapt resource value: 2130837594
 			public static int design_snackbar_background = 2130837594;
-			
-			// aapt resource value: 0
-			public static int free-background-wallpaper-22918-23554-hd-wallpapers = 0;
 			
 			// aapt resource value: 2130837587
 			public static int ic_audiotrack_dark = 2130837587;
