@@ -94,6 +94,10 @@ namespace TakeMyRide.Data
             return await RideRepository.GetAllAsync();
         }
 
+        public async Task<IEnumerable<Ride>> GetAvailableRidesAsync()
+        {
+            return await RideRepository.GetAllAvailableAsync();
+        }
 
         public async Task<int> GetLastRideId()
         {

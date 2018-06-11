@@ -20,6 +20,11 @@ namespace TakeMyRide.Data.Fake
             return await Task.FromResult(rides);
         }
 
+        public static async Task<List<Ride>> GetAllAvailableAsync()
+        {
+            return await Task.FromResult(rides.Where(r => r.AmountOfSeats > 0).ToList());
+        }
+
         public static async Task<Ride> GetRideById(int id)
         {
             return await Task.FromResult(rides.FirstOrDefault(r => r.Id == id));
