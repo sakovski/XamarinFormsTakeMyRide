@@ -29,6 +29,18 @@ namespace TakeMyRide.Services
             }
         }
 
+        public async Task<bool> isUsernameAvailableAsync(string username)
+        {
+            var user = await App.Database.GetUserAsync(username);
+            return user == null;
+        }
+
+        public async Task<bool> isEmailAvailableAsync(string email)
+        {
+            var user = await App.Database.GetUserByEmailAsync(email);
+            return user == null;
+        }
+
         private User createUser(string username, string password, string firstname, string lastname, string email, string telephone, DateTime dateOfBirth)
         {
             return new User()

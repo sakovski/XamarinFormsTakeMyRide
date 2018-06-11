@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using TakeMyRide.Services;
+using TakeMyRide.Validators;
 using Xamarin.Forms;
 
 namespace TakeMyRide.ViewModels
@@ -116,11 +118,38 @@ namespace TakeMyRide.ViewModels
             {
                 return new Command(async () =>
                 {
-                    registerService.registerUserAsync(Function, UserName, Password, FirstName, LastName, Email, Telephone, DateOfBirth);
-                    await Application.Current.MainPage.Navigation.PopAsync();
-                    await Application.Current.MainPage.DisplayAlert("Register succesful!", "", "OK");
+                    if(!IsRegisterDataValid())
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Given data invalid!", "", "OK");
+                    }
+                    else if(!await registerService.isUsernameAvailableAsync(UserName))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Username already in use!", "", "OK");
+                    }
+                    else if(!await registerService.isEmailAvailableAsync(Email))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Email already in use!", "", "OK");
+                    }
+                    else
+                    {                      
+                        registerService.registerUserAsync(Function, UserName, Password, FirstName, LastName, Email, Telephone, DateOfBirth);
+                        await Application.Current.MainPage.Navigation.PopAsync();
+                        await Application.Current.MainPage.DisplayAlert("Register succesful!", "", "OK");
+                    }
+                    
                 });
             }
+        }
+
+        private bool IsRegisterDataValid()
+        {
+            return Regex.IsMatch(FirstName, RegexPatterns.namePattern) && FirstName != null
+                && Regex.IsMatch(LastName, RegexPatterns.namePattern) && LastName != null
+                && Regex.IsMatch(Telephone, RegexPatterns.phoneNumberPattern) && Telephone != null
+                && Regex.IsMatch(Email, RegexPatterns.emailPattern) && Email != null
+                && DatesValidators.IsDateOfBirthValid(DateOfBirth)
+                && Password != null && Password != string.Empty 
+                && Function != string.Empty && Function != null;
         }
     }
 }

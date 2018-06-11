@@ -35,19 +35,23 @@
                             SeparatorColor="Black">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Driver}"
-                                      Detail="{Binding DateOfRide, StringFormat='{0:yyyy-MM-dd}'}"
-                                      TextColor="Black"/>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" BackgroundColor="Yellow">
+                                    <Label Text="{Binding StartCity}"></Label>
+                                    <Label Text="{Binding DestinationCity}"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                          
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
         </StackLayout>
         <StackLayout VerticalOptions="End">
-            <Button Command="{Binding AddVisit, Mode=TwoWay}"
-                    Text="Dodaj wizytę"
+            <Button Command="{Binding ShowMore, Mode=TwoWay}"
+                    Text="Show more..."
                     TextColor="White"
                     BackgroundColor="Green" />
         </StackLayout>
-    </StackLayout>
+    </StackLayout> 
 </ContentPage>

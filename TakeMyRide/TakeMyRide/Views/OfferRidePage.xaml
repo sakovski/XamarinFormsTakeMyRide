@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
+             xmlns:behavior="clr-namespace:TakeMyRide.Validators"
              x:Class="TakeMyRide.Views.OfferRidePage">
     <ContentPage.BindingContext>
             <viewModels:OfferRideViewModel />
@@ -11,39 +12,71 @@
         <Label Text="New Ride" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-        <Label Text="Start City"/>
+
         <Entry x:Name="StartCityEntry" 
-               Text="{Binding StartCity}"/>
-        <Label Text="DestinationCity"/>
+               Placeholder="Start City"
+               Text="{Binding StartCity}">
+            <Entry.Behaviors>
+                <behavior:NameValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Entry x:Name="DestinationCityEntry" 
-               Text="{Binding DestinationCity}"/>
+               Placeholder="Destination City"
+               Text="{Binding DestinationCity}">
+            <Entry.Behaviors>
+                <behavior:NameValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Label Text="Date of start"/>
         <DatePicker Date="{Binding DateOfStart}"
                             Format="dd-MM-yyyy"
                             Grid.Row="0"
                             Grid.Column="1" />
+
         <Label Text="Time of start"/>
         <TimePicker Time="{Binding TimeOfStart}"
                         Format="hh-mm"
                         Grid.Row="0"
                         Grid.Column="1" />
-        <Label Text="Price"/>
+
         <Entry x:Name="PriceEntry" 
+               Placeholder="Price (PLN)"
                Keyboard="Numeric"   
-               Text="{Binding PriceForSeat}"/>
-        <Label Text="Seats"/>
+               Text="{Binding PriceForSeat}">
+            <Entry.Behaviors>
+                <behavior:PriceValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Entry x:Name="SeatsEntry" 
                Keyboard="Numeric"
-               Text="{Binding AmountOfSeats}"/>
-        <Label Text="Car Information"/>
-        <Entry x:Name="CarInfoEntry" 
-               Text="{Binding CarInfo}"/>
-        <Label Text="Additional Info"/>
-        <Entry x:Name="AdditionalInfoEntry" 
-               HeightRequest = "35"
-               Text="{Binding AdditionalInfo}"/>
+               Placeholder="Amount of seats (1-9)"
+               Text="{Binding AmountOfSeats}">
+            <Entry.Behaviors>
+                <behavior:SeatsValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
 
-        <Button Command="{Binding AddRide, Mode=TwoWay}" 
+        <Entry x:Name="CarInfoEntry" 
+               Placeholder="Give information about car: model, color,..."
+               Text="{Binding CarInfo}">
+            <Entry.Behaviors>
+                <behavior:DescriptionValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Entry x:Name="AdditionalInfoEntry" 
+               Placeholder="Give additional information: smokers friendly, animal friendly or do you like listening music..."
+               HeightRequest = "35"
+               Text="{Binding AdditionalInfo}">
+            <Entry.Behaviors>
+                <behavior:DescriptionValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Button Command="{Binding AddOffer, Mode=TwoWay}" 
                 Text="Publish Offer" 
                 BackgroundColor="Bisque" 
                 BorderRadius="20" 

@@ -26,7 +26,12 @@ namespace TakeMyRide.Data
         {
             return UserRepository.GetUserByUsername(username);
         }
-        
+
+        public Task<User> GetUserByEmailAsync(string email)
+        {
+            return UserRepository.GetUserByEmail(email);
+        }
+
         public Task<int> SaveUserAsync(User user)
         {
             if (user.Id != 0)

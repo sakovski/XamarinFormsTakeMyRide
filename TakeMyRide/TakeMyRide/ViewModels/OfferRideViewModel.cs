@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using TakeMyRide.Services;
+using TakeMyRide.Validators;
 using Xamarin.Forms;
 
 namespace TakeMyRide.ViewModels
@@ -115,10 +117,29 @@ namespace TakeMyRide.ViewModels
             {
                 return new Command(async () =>
                 {
-                    offerRideService.OfferRideAsync(StartCity, DestinationCity, DateOfStart, TimeOfStart, PriceForSeat, AmountOfSeats, CarInfo, AdditionalInfo);
-                    await Application.Current.MainPage.DisplayAlert("Register succesful!", "", "OK");
+                    if(!IsOfferDataValid())
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Given data invalid!", "Correct red fields.", "OK");
+                    }
+                    else
+                    {
+                        offerRideService.OfferRideAsync(StartCity, DestinationCity, DateOfStart, TimeOfStart, PriceForSeat, AmountOfSeats, CarInfo, AdditionalInfo);
+                        await Application.Current.MainPage.DisplayAlert("Offer published!", "", "OK");
+                    }
+                    
                 });
             }
+        }
+
+        private bool IsOfferDataValid()
+        {
+            return Regex.IsMatch(StartCity, RegexPatterns.namePattern) && StartCity != null
+               && Regex.IsMatch(DestinationCity, RegexPatterns.namePattern) && DestinationCity != null
+               && Regex.IsMatch(PriceForSeat, RegexPatterns.pricePattern) && PriceForSeat != null
+               && Regex.IsMatch(AmountOfSeats, RegexPatterns.seatsPattern) && AmountOfSeats != null
+               && Regex.IsMatch(CarInfo, RegexPatterns.descriptionPattern) && CarInfo != null
+               && Regex.IsMatch(AdditionalInfo, RegexPatterns.descriptionPattern) && AdditionalInfo != null
+               && DatesValidators.IsDateOfRideValid(DateOfStart);
         }
     }
 }

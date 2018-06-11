@@ -9,11 +9,26 @@ namespace TakeMyRide.ViewModels
 {
     public class OffersListViewModel : BaseViewModel
     {
+        public IList<RideOfferCardDataModel> CardDataCollection { get; set; }
+
         public OffersListViewModel()
         {
-            var offers = App.Database.GetRidesAsync();
-            OffersList = new ObservableCollection<Ride>(offers.Result);
-        }
+           
+            var offers = App.Database.GetRidesAsync().Result;
+            OffersList = new ObservableCollection<Ride>(offers);
+            CardDataCollection = new ObservableCollection<RideOfferCardDataModel>();
+            foreach(Ride ride in offers)
+            {
+                CardDataCollection.Add(new RideOfferCardDataModel()
+                {
+                    StartCity = ride.StartCity,
+                    DestinationCity = ride.DestinationCity,
+                    Date = ride.DateOfStart,
+                    Username = ride.Driver.User.UserName
+                });
+            }
+            
+        }  
 
         private Ride _selectedOffer;
         public Ride SelectedOffer

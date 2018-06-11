@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
+             xmlns:behaviors="clr-namespace:TakeMyRide.Validators"
              x:Class="TakeMyRide.Views.RegisterPage">
     <ContentPage.BindingContext>
         <viewModels:RegisterViewModel />
     </ContentPage.BindingContext>
 
     <StackLayout HorizontalOptions="FillAndExpand">
-        <!-- Place new controls here -->
+
         <Label Text="Register" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
@@ -21,30 +22,53 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Label Text="Login"/>
+
         <Entry x:Name="LoginEntry" 
+               Placeholder="Login"
                Text="{Binding UserName}"/>
-        <Label Text="Password"/>
+
         <Entry x:Name="PasswordEntry" 
+               Placeholder="Password"
                IsPassword="true" 
                Text="{Binding Password}"/>
-        <Label Text="Firstname"/>
+
         <Entry x:Name="FirstnameEntry" 
-               Text="{Binding FirstName}"/>
-        <Label Text="Lastname"/>
+               Placeholder="Firstname"
+               Text="{Binding FirstName}">
+            <Entry.Behaviors>
+                <behaviors:NameValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Entry x:Name="LastnameEntry" 
-               Text="{Binding LastName}"/>
-        <Label Text="Email"/>
+               Placeholder="Lastname"
+               Text="{Binding LastName}">
+            <Entry.Behaviors>
+                <behaviors:NameValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Entry x:Name="EmailEntry" 
-               Text="{Binding Email}"/>
-        <Label Text="Telephone"/>
+               Placeholder="Email"
+               Text="{Binding Email}">
+            <Entry.Behaviors>
+                <behaviors:EmailValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Entry x:Name="TelephoneEntry" 
-               Text="{Binding Telephone}"/>
+               Placeholder="Telephone"
+               Text="{Binding Telephone}">
+            <Entry.Behaviors>
+                <behaviors:PhoneNumberValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+
         <Label Text="Date of birth"/>
         <DatePicker Date="{Binding DateOfBirth}"
                             Format="dd-MM-yyyy"
                             Grid.Row="0"
-                            Grid.Column="1" />    
+                            Grid.Column="1" />
         <Button Command="{Binding RegisterUser, Mode=TwoWay}" 
                 Text="Register" 
                 BackgroundColor="Bisque" 
