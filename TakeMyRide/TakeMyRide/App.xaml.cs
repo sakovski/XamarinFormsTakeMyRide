@@ -1,5 +1,6 @@
 using System;
 using TakeMyRide.Data;
+using TakeMyRide.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,13 +9,11 @@ namespace TakeMyRide
 {
 	public partial class App : Application
 	{
-        //private static DatabaseService database;
         private static FakeDatabaseService database;
 
 		public App ()
 		{
 			InitializeComponent();
-
 			MainPage = new NavigationPage(new MainPage());
 		}
 
@@ -30,8 +29,9 @@ namespace TakeMyRide
                 return database;
             }
         }
-        
+
         /*
+        private static DatabaseService database;
         public static DatabaseService Database
         {
             get
@@ -46,22 +46,20 @@ namespace TakeMyRide
         */
         protected override void OnStart ()
 		{
-            createDB();
+            
 		}
 
 		protected override void OnSleep ()
 		{
-			// Handle when your app sleeps
+            Settings.SessionTimer = DateTime.Now;
 		}
 
 		protected override void OnResume ()
 		{
-			// Handle when your app resumes
-		}
-
-        private void createDB()
-        {
-
+            if (DateTime.Now - Settings.SessionTimer > TimeSpan.FromMinutes(60))
+            {
+                MessagingCenter.Send(this, "Your session expired");
+            }
         }
 	}
 }

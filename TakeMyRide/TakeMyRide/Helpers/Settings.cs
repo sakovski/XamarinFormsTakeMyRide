@@ -58,9 +58,23 @@ namespace TakeMyRide.Helpers
             }
         }
 
+        public static DateTime SessionTimer
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("Session", DateTime.Now);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("Session", value);
+            }
+        }
+
+
         public static void Clear()
         {
             Username = Password = Function = string.Empty;
+            SessionTimer = DateTime.Now;
         }
 
     }
