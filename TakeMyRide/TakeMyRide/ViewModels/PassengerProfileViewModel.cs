@@ -11,6 +11,8 @@ namespace TakeMyRide.ViewModels
 {
     public class PassengerProfileViewModel : BaseViewModel
     {
+        private RatingService ratingService = new RatingService();
+
         public PassengerProfileViewModel()
         {
             var user = App.Database.GetUserAsync(Settings.Username).Result;
@@ -125,6 +127,18 @@ namespace TakeMyRide.ViewModels
                 CarInfo = _selectedOffer.CarInfo,
                 AdditionalInfo = _selectedOffer.AdditionalInfo
             };
+        }
+
+        public async void AddRateToUser(float rate)
+        {
+            if (ratingService.AddRateToUser(_selectedOffer.Driver.User.UserName, rate))
+            {
+                await Application.Current.MainPage.DisplayAlert("Login failed!", "Check if username and password match or correct function is chosen!", "OK");
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Login failed!", "Check if username and password match or correct function is chosen!", "OK");
+            }
         }
     }
 }

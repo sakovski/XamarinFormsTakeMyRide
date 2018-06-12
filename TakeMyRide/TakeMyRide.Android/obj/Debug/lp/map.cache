@@ -1,5 +1,7 @@
 FormsViewGroup
 Newtonsoft.Json
+Plugin.Settings.Abstractions
+Plugin.Settings
 SQLite-net
 SQLiteNetExtensions
 SQLiteNetExtensionsAsync
@@ -33,5 +35,3 @@ Xamarin.Forms.Xaml
 netstandard
 System.Reflection.Extensions
 System.Resources.ResourceManager
-Plugin.Settings.Abstractions
-Plugin.Settings
