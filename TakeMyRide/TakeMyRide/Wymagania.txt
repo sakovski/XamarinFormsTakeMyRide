@@ -22,5 +22,4 @@ Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wc
 -potiwerdzenia hasla przy rejestracji
 -splash screen
 -wyszukiwanie ofert
--gdy przechodzimy z profilu do oferty, nie moze byc przycisku do bookowania
 -...

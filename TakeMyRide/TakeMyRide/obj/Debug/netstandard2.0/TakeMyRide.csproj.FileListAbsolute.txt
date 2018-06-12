@@ -13,7 +13,6 @@ D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\net
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\MainMenuPageMaster.xaml.g.cs
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\OfferRidePage.xaml.g.cs
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
-D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\SearchRidePage.xaml.g.cs
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\TakeMyRide.csprojAssemblyReference.cache
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide\obj\Debug\netstandard2.0\Views\OfferDetailsPage.xaml.g.cs

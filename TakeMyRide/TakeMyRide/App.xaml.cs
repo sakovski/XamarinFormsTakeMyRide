@@ -58,6 +58,7 @@ namespace TakeMyRide
 		{
             if (DateTime.Now - Settings.SessionTimer > TimeSpan.FromMinutes(60))
             {
+                Settings.Clear();
                 MessagingCenter.Send(this, "Your session expired");
             }
         }

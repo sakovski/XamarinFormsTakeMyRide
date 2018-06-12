@@ -16,5 +16,10 @@ namespace TakeMyRide.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void RateSlider_ValueChanged()
+        {
+
+        }
+    }
 }

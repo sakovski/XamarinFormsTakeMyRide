@@ -116,6 +116,16 @@
                                         TextColor="Black"
                                         Grid.Row="0"
                                         Grid.Column="2" />
+                                        <Slider x:Name="RateSlider"
+                                                ValueChanged="RateSlider_ValueChanged"
+                                                Minimum="0" Maximum="5"
+                                                Value="5"
+                                                Grid.Row="1"
+                                                Grid.Column="2"/>
+                                        <Label Text="{Binding Source={x:Reference RateSlider}, Path=Value, StringFormat='Your rating: {0:F0}'}"
+                                               TextColor="Black"
+                                                Grid.Row="1"
+                                                Grid.Column="3" />
                                     </Grid>
                                 </StackLayout>
                             </ViewCell>
