@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TakeMyRide.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class UserProfilePage : ContentPage
+	public partial class DriverProfilePage : ContentPage
 	{
-		public UserProfilePage ()
+		public DriverProfilePage ()
 		{
 			InitializeComponent ();
 		}

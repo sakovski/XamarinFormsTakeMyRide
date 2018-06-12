@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
              BackgroundImage="background.jpg"
-             x:Class="TakeMyRide.Views.HomePage">
+             x:Class="TakeMyRide.Views.DriverProfilePage">
 
     <ContentPage.BindingContext>
-        <viewModels:OffersListViewModel />
+        <viewModels:DriverProfileViewModel />
     </ContentPage.BindingContext>
 
     <StackLayout HorizontalOptions="FillAndExpand">
-        <Label Text="Ride Offers"
+        <Label Text="Your profile"
                FontSize="Large"
                TextColor="White"
                BackgroundColor="Black"
@@ -20,8 +20,68 @@
                HorizontalOptions="FillAndExpand"
                Opacity="0.75"
                VerticalOptions="Start" />
+
+            <Label Text="Name:"
+                       TextColor="White"
+                       FontSize="Micro"
+                       FontAttributes="Bold"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+            <Label Text="{Binding DriverName}"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.Column="1" />
+            <Label Text="Email:"
+                       TextColor="White"
+                       FontSize="Micro"
+                       FontAttributes="Bold"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+            <Label Text="{Binding DriverEmail}"
+                       TextColor="White"
+                       Grid.Row="1"
+                       Grid.Column="1" />
+            <Label Text="Telephone:"
+                       TextColor="White"
+                       FontSize="Micro"
+                       FontAttributes="Bold"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+            <Label Text="{Binding DriverTelephone}"
+                       TextColor="White"
+                       Grid.Row="2"
+                       Grid.Column="1" />
+            <Label Text="Rating:"
+                       TextColor="White"
+                       FontSize="Micro"
+                       FontAttributes="Bold"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+            <Label Text="{Binding DriverRating}"
+                       TextColor="White"
+                       Grid.Row="2"
+                       Grid.Column="1" />
+
         <StackLayout Padding="2"
                      VerticalOptions="StartAndExpand">
+            <Label Text="Your rides"
+               FontSize="Medium"
+               TextColor="White"
+               BackgroundColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               HeightRequest="40"
+               HorizontalOptions="FillAndExpand"
+               Opacity="0.75"
+               VerticalOptions="Start" />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -77,5 +137,5 @@
                 </ListView>
             </Grid>
         </StackLayout>
-    </StackLayout> 
+    </StackLayout>
 </ContentPage>

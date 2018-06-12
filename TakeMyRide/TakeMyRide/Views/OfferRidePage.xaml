@@ -10,11 +10,18 @@
         </ContentPage.BindingContext>
     <ScrollView>
     <StackLayout HorizontalOptions="FillAndExpand">
-        <Label Text="New Ride" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+            <Label Text="Create Ride Offer"
+               FontSize="Large"
+               TextColor="White"
+               BackgroundColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               HeightRequest="40"
+               HorizontalOptions="FillAndExpand"
+               Opacity="0.75"
+               VerticalOptions="Start" />
 
-        <Entry x:Name="StartCityEntry" 
+            <Entry x:Name="StartCityEntry" 
                Placeholder="Start City"
                Text="{Binding StartCity}">
             <Entry.Behaviors>
@@ -30,13 +37,13 @@
             </Entry.Behaviors>
         </Entry>
 
-        <Label Text="Date of start"/>
+        <Label Text="Date of start" TextColor="White"/>
         <DatePicker Date="{Binding DateOfStart}"
                             Format="dd-MM-yyyy"
                             Grid.Row="0"
                             Grid.Column="1" />
 
-        <Label Text="Time of start"/>
+        <Label Text="Time of start" TextColor="White"/>
         <TimePicker Time="{Binding TimeOfStart}"
                         Format="hh-mm"
                         Grid.Row="0"

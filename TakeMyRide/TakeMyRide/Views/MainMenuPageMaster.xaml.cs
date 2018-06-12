@@ -47,7 +47,7 @@ namespace TakeMyRide.Views
                         {
                             new MainMenuPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(HomePage) },
                             new MainMenuPageMenuItem { Id = 1, Title = "Offer your ride", TargetType = typeof(OfferRidePage) },
-                            new MainMenuPageMenuItem { Id = 2, Title = "Your profile", TargetType = typeof(UserProfilePage) },
+                            new MainMenuPageMenuItem { Id = 2, Title = "Your profile", TargetType = typeof(DriverProfilePage) },
                         });
                         break;
                     case "Passenger":
@@ -55,7 +55,7 @@ namespace TakeMyRide.Views
                         {
                             new MainMenuPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(HomePage) },
                             new MainMenuPageMenuItem { Id = 1, Title = "Search rides", TargetType = typeof(SearchRidePage) },
-                            new MainMenuPageMenuItem { Id = 2, Title = "Your profile", TargetType = typeof(UserProfilePage) },
+                            new MainMenuPageMenuItem { Id = 2, Title = "Your profile", TargetType = typeof(PassengerProfilePage) },
                         });
                         break;
                     default:

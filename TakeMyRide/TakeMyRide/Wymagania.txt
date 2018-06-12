@@ -20,8 +20,7 @@ Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wc
 
 //TODO:
 -potiwerdzenia hasla przy rejestracji
--onsleep on resume + sesja uzytkownika
 -splash screen
--profil uzytkownika w ktorym wyswietlone sa jego przejazdy(u drivera wystawione, a u passengera zabookowane)
 -wyszukiwanie ofert
+-gdy przechodzimy z profilu do oferty, nie moze byc przycisku do bookowania
 -...

@@ -28,6 +28,22 @@ namespace TakeMyRide.Data.Fake
                 .ToList());
         }
 
+        public static async Task<List<Ride>> GetDriverRidesOrderedByDateAsync(string username)
+        {
+            return await Task.FromResult(rides
+                .Where(r => r.Driver.User.UserName.Equals(username))
+                .OrderBy(r => r.DateOfStart)
+                .ToList());
+        }
+
+        public static async Task<List<Ride>> GetPassengerRidesOrderedByDateAsync(string username)
+        {
+            return await Task.FromResult(rides
+                .Where(r => r.Passengers.FirstOrDefault(p => p.User.UserName.Equals(username)) != null)
+                .OrderBy(r => r.DateOfStart)
+                .ToList());
+        }
+
         public static async Task<Ride> GetRideById(int id)
         {
             return await Task.FromResult(rides.FirstOrDefault(r => r.Id == id));

@@ -11,12 +11,17 @@
     <ScrollView>
     <StackLayout HorizontalOptions="FillAndExpand">
 
-        <Label Text="Register" 
-               FontSize="Medium"
+            <Label Text="Create new account"
+               FontSize="Large"
                TextColor="White"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Label Text="Account Type" TextColor="White"/>
+               BackgroundColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               HeightRequest="40"
+               HorizontalOptions="FillAndExpand"
+               Opacity="0.75"
+               VerticalOptions="Start" />
+            <Label Text="Account Type" TextColor="White"/>
         <Picker x:Name="UserTypePicker" SelectedItem="{Binding Function}" BackgroundColor="White">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">

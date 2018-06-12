@@ -104,6 +104,16 @@ namespace TakeMyRide.Data
             return await RideRepository.GetAllAvailableOrderedByDateAsync();
         }
 
+        public async Task<IEnumerable<Ride>> GetDriverRidesOrderedByDateAsync(string username)
+        {
+            return await RideRepository.GetDriverRidesOrderedByDateAsync(username);
+        }
+
+        public async Task<IEnumerable<Ride>> GetPassengerRidesOrderedByDateAsync(string username)
+        {
+            return await RideRepository.GetPassengerRidesOrderedByDateAsync(username);
+        }
+
         public async Task<int> GetLastRideId()
         {
             return await RideRepository.GetLastId();
