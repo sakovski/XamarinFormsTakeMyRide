@@ -13,7 +13,7 @@ namespace TakeMyRide.ViewModels
         public OffersListViewModel()
         {
            
-            var offers = App.Database.GetAvailableRidesAsync().Result;
+            var offers = App.Database.GetAvailableRidesOrderedByDateAsync().Result;
             OffersList = new ObservableCollection<Ride>(offers);           
         }  
 

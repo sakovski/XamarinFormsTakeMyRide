@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TakeMyRide.ViewModels"
+             BackgroundImage="background.jpg"
              x:Class="TakeMyRide.Views.HomePage">
 
     <ContentPage.BindingContext>
@@ -17,6 +18,7 @@
                VerticalTextAlignment="Center"
                HeightRequest="40"
                HorizontalOptions="FillAndExpand"
+               Opacity="0.75"
                VerticalOptions="Start" />
         <StackLayout Padding="2"
                      VerticalOptions="StartAndExpand">
@@ -36,7 +38,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Vertical" BackgroundColor="Yellow" Padding="10">
+                                <StackLayout Orientation="Vertical" Opacity="0.75" BackgroundColor="WhiteSmoke" Margin = "0,3,0,3">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
@@ -62,16 +64,10 @@
                                         TextColor="Black"
                                          Grid.Row="1"
                                          Grid.Column="1" />
-                                        <Label Text="Date:"
-                                        FontSize="Micro"
-                                        Grid.Row="0"
-                                         Grid.Column="2"
-                                        HorizontalOptions="Start"
-                                        VerticalOptions="Center" />
                                         <Label Text="{Binding DateOfStart, StringFormat='{0:dd-MM-yyyy hh:mm}'}"
                                         TextColor="Black"
                                         Grid.Row="0"
-                                        Grid.Column="3" />
+                                        Grid.Column="2" />
                                     </Grid>
                                 </StackLayout>
                             </ViewCell>
@@ -81,11 +77,11 @@
                 </ListView>
             </Grid>
         </StackLayout>
-        <StackLayout VerticalOptions="End">
+        <StackLayout VerticalOptions="StartAndExpand">
             <Button Command="{Binding ShowMore, Mode=TwoWay}"
                     Text="Show more..."
-                    TextColor="White"
-                    BackgroundColor="Green" />
+                    TextColor="Black"
+                    BackgroundColor="White" />
         </StackLayout>
     </StackLayout> 
 </ContentPage>

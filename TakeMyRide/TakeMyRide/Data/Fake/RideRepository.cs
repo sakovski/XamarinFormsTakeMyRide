@@ -20,9 +20,12 @@ namespace TakeMyRide.Data.Fake
             return await Task.FromResult(rides);
         }
 
-        public static async Task<List<Ride>> GetAllAvailableAsync()
+        public static async Task<List<Ride>> GetAllAvailableOrderedByDateAsync()
         {
-            return await Task.FromResult(rides.Where(r => r.AmountOfSeats > 0).ToList());
+            return await Task.FromResult(rides
+                .Where(r => r.AmountOfSeats > 0 && r.DateOfStart.CompareTo(DateTime.Now) > 0)
+                .OrderByDescending(r => r.DateOfStart)
+                .ToList());
         }
 
         public static async Task<Ride> GetRideById(int id)

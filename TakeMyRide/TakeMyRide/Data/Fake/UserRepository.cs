@@ -15,33 +15,6 @@ namespace TakeMyRide.Data
         static UserRepository()
         {
             users = new List<User>();
-            SeedUsers();
-        }
-
-        private static void SeedUsers()
-        {
-            User user1 = new User { Id = 1, UserName = "testdriver", Password = "testdriver", FirstName = "Test", LastName = "Test", Email = "driver@test.pl", Telephone = "123123123", DateOfBirth = DateTime.Today.AddYears(-40) };
-            User user2 = new User { Id = 2, UserName = "testpassenger", Password = "testpassenger", FirstName = "Test", LastName = "Test", Email = "passenger@test.pl", Telephone = "111222333", DateOfBirth = DateTime.Today.AddYears(-40) };
-            users.Add(user1);
-            users.Add(user2);
-            DriverRepository.InsertDriver(
-                new Driver()
-                {
-                    User = user1,
-                    UserId = user1.Id,
-                    RidesAsDriver = new List<Ride>(),
-                    Ratings = new List<float>()
-                }
-                );
-            PassengerRepository.InsertPassenger(
-                new Passenger()
-                {
-                    User = user2,
-                    UserId = user2.Id,
-                    RidesAsPassenger = new List<Ride>()
-                }
-            );
-
         }
 
         public static async Task<List<User>> GetAllAsync()

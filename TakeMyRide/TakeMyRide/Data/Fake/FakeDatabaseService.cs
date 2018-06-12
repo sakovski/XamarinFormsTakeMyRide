@@ -10,6 +10,11 @@ namespace TakeMyRide.Data
     public class FakeDatabaseService
     {
 
+        public FakeDatabaseService()
+        {
+            DatabaseSeeder.SeedDatabase();            
+        }
+
         #region User
         public Task<List<User>> GetUsersAsync()
         {
@@ -94,9 +99,9 @@ namespace TakeMyRide.Data
             return await RideRepository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Ride>> GetAvailableRidesAsync()
+        public async Task<IEnumerable<Ride>> GetAvailableRidesOrderedByDateAsync()
         {
-            return await RideRepository.GetAllAvailableAsync();
+            return await RideRepository.GetAllAvailableOrderedByDateAsync();
         }
 
         public async Task<int> GetLastRideId()
@@ -124,6 +129,6 @@ namespace TakeMyRide.Data
         {
             return RideRepository.DeleteRide(ride);
         }
-        #endregion
+        #endregion       
     }
 }

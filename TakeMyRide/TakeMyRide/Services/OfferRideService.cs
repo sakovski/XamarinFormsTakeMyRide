@@ -34,7 +34,7 @@ namespace TakeMyRide.Services
                 AmountOfSeats = amountOfSeats,
                 CarInfo = carInfo,
                 AdditionalInfo = additionalInfo,
-                Passengers = new List<Passenger>(0)
+                Passengers = new List<Passenger>(amountOfSeats)
             };
         }
     }
