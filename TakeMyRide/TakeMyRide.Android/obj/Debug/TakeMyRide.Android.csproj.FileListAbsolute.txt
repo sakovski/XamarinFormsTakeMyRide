@@ -83,15 +83,12 @@ D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\D
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\bin\Debug\TakeMyRide.Android.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\SQLiteNetExtensions.dll.mdb
-D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\SQLiteNetExtensionsAsync.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\TakeMyRide.Android.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Microsoft.CSharp.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Mono.Android.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Mono.Security.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\mscorlib.pdb
-D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\SQLite-net.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\System.ComponentModel.Composition.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\System.Core.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\System.Data.pdb
@@ -117,7 +114,6 @@ D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\D
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\android\assets\Plugin.Settings.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\bin\Debug\TakeMyRide.Android.dll
-D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\linksrc\TakeMyRide.pdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\linksrc\TakeMyRide.Android.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 D:\Programming\Xamarin\TakeMyRide\TakeMyRide\TakeMyRide\TakeMyRide.Android\obj\Debug\linksrc\Plugin.Settings.Abstractions.dll.mdb

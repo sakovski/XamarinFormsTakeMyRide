@@ -19,11 +19,11 @@ Extra 10 % za obecność.
 Na ostatnich 3 zajęciach odbędą się prezentacje projektów studenckich wg wcześniej ogłoszonego harmonogramu.
 
 //TODO:
--wyswietlanie kart z ofertami w HomePage
 -potiwerdzenia hasla przy rejestracji
 -onsleep on resume + sesja uzytkownika
 -splash screen
 -scrollowanie przy formularzach
 -zmienic tlo i kolorystyke bo sie gryzie
--napraw wyjatki
+-profil uzytkownika w ktorym wyswietlone sa jego przejazdy(u drivera wystawione, a u passengera zabookowane)
+-wyszukiwanie ofert
 -...

@@ -7,7 +7,7 @@
     <ContentPage.BindingContext>
             <viewModels:OfferRideViewModel />
         </ContentPage.BindingContext>
-
+    <ScrollView>
     <StackLayout HorizontalOptions="FillAndExpand">
         <Label Text="New Ride" 
            HorizontalOptions="Center"
@@ -88,4 +88,5 @@
             </Button.Image>
         </Button>
     </StackLayout>
+    </ScrollView>
 </ContentPage>

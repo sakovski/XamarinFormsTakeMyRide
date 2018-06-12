@@ -8,7 +8,7 @@
     <ContentPage.BindingContext>
         <viewModels:RegisterViewModel />
     </ContentPage.BindingContext>
-
+    <ScrollView>
     <StackLayout HorizontalOptions="FillAndExpand">
 
         <Label Text="Register" 
@@ -80,4 +80,5 @@
                 TextColor="Black">
         </Button>
     </StackLayout>
+    </ScrollView>
 </ContentPage>
